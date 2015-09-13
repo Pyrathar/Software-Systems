@@ -17,7 +17,25 @@ import javax.jws.WebParam;
 public class Calculator {
     
     
+    public Double Sum(int First ,int Second){
+        double Result = First + Second;
+            return Result;
+    }
     
+     public Double Minus(int First ,int Second){
+        double Result = First - Second;
+            return Result;
+    }
+     
+     public Double Div(int First ,int Second){
+        double Result = First%Second;
+            return Result;
+    } 
+     
+      public Double Multi(int First ,int Second){
+        double Result = First*Second;
+            return Result;
+    }  
 
     /**
      * This is a sample web service operation
@@ -39,28 +57,28 @@ public class Calculator {
             case '+': 
             {
                 double answer;
-                answer=First+Second;
+                answer=Sum(First,Second);
                 return answer;
             }
             
             case '-': 
             {
                 double answer;
-                answer=First-Second;
+                answer=Minus(First,Second);
                 return answer;
             }
             
-              case 'x': 
+              case '*': 
             {
                 double answer;
-                answer=First*Second;
+                answer=Multi(First,Second);
                 return answer;
             }
               
                  case '/': 
             {
                 double answer;
-                answer=First/Second;
+                answer=Div(First,Second);
                 return answer;
             }
        
